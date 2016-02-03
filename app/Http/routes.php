@@ -48,3 +48,6 @@ Route::get('typography','frontController@typography');
 Route::get('icons','frontController@icons');
 Route::get('grid','frontController@grid');
 Route::get('prueba','frontController@prueba');
+/*edita raul*/
+Route::get('admin/types','typeController@type');
+Route::get('admin/sections','typeController@section');
