@@ -3,36 +3,47 @@
        <!---contact-->
 
     <div class="main-contact">
-           <h3 class="head">Types</h3>
-            <p></p>
-        <div class="contact-form">
-          <form>
-               <!---CheckBox-->
-            <div class="priChec"> <label> Private</label>
-            
-                <div class="material-switch pull-right">
+           <h3 class="head">SECCION</h3>
+            <p>PAGINA PARA LA SECCION</p>
+  <div class="contact-form">
+      <form>
+
+         <div class="col-md-12 contact-left"> 
+                <div class="row">
+      
+              <div class="col-md-3">
+              <label>Tipo</label>
+               <select class="form-control"> 
+                  <option>pagina</option>
+                  <option>Form</option>
+               </select>
+              </div>
+              <div class="col-md-5"></div>
+                 <!---CheckBox-->
+              <div class="col-md-3">
+                <div class="priChec"> <label> Privado</label>
+                  <div class="material-switch pull-right">
                   <input id="someSwitchOptionSuccess" name="someSwitchOption001" type="checkbox"/>
                   <label for="someSwitchOptionSuccess" class="label-success"></label>
                 </div>           
-            </div>
+                </div>
+              </div>
          <!--checkFin-->
-         <select class="form-control"> 
-         <option>pagina</option>
-         <option>Form</option>
-         </select>
-         <div class="col-md-12 contact-left">
-            <label> Title</label>
+        </div>
+              <br>
+              <br>
+
+            <label> Titulo</label>
             <input type="text" placeholder="Title" required/>
-            <label> Body</label>   
-        
-           <textarea   id = "editor"   ></textarea> 
-
-
-             <input type="submit" value="SEND"/>
+            <label> Resumen</label>           
+            <textarea   id = "editor"   ></textarea> 
+            <label> Contenido</label>           
+            <textarea   id = "editor"   ></textarea> 
+            <input type="submit" value="SEND"/>
          </div>
 
-                <div class="clearfix"></div>
-           </form>
+         <div class="clearfix"></div>
+      </form>
     </div>
 </div>
   @stop
