@@ -19,4 +19,15 @@ class typeController extends Controller
     	return view('section');
     }
 
+ public function NuevoTipe()
+    {
+
+
+    	$type = new cms_types;
+
+    	$type->titulo = input::get('title');
+    	$type->description= input::get('descripcion');
+
+    	$type->save();
+    }
 }

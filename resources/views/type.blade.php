@@ -2,6 +2,7 @@
   @section('content')
        <!---contact-->
 
+
     <div class="main-contact">
            <h3 class="head">Types</h3>
             <p></p>
@@ -24,5 +25,7 @@
            </form>
     </div>
 </div>
+
+
   @stop
 
