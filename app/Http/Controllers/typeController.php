@@ -11,24 +11,31 @@ class typeController extends Controller
 {
    public function type()
     {
-    	return view('type');
+    	return view('Types.type');
     	
     }
 
       public function store(Request $request)
     {
-        // Validate the request...
+      \App\cms_type::create([
+      'title' => $request['titulo'],
+      'description'=>$request['descripcion'],
+      'active'=>'1',//$request[''],
+      'register_by'=>'1',//,$request[''],
+      'register_date'=>'2015/02/02',
+      'modify_by'=>'1',
+      'modify_date'=>'2015/03/03',
+      'register_by'=>'1',
+     
 
-        $type= new cms_types;
+      ]);
+      return view('Types.type');
 
-        $type->titulo = $request->title;
-
-        $type->save();
+      
     }
 
-    public function section()
-    {
-    	return view('section');
+   
 
-    }
+
+    
 }

@@ -13,8 +13,9 @@ class CreateMenItemsTable extends Migration
     public function up()
     {
         Schema::create('men_items', function (Blueprint $table) {
-               $table->increments('id');
-            $table->integer('id_men_menu');
+            $table->increments('id');
+            $table->integer('id_men_menu')->unsigned();
+            $table->foreign('id_men_menu')->references('id')->on('men_menus');
             $table->string('title',250);
             $table->text('description');
             $table->string('size',20);

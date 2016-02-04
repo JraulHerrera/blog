@@ -14,7 +14,8 @@ class CreateCmsSectionsTable extends Migration
     {
         Schema::create('cms_sections', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('id_type');
+            $table->integer('id_type')->unsigned();
+            $table->foreign('id_type')->references('id') ->on('cms_types');
             $table->string('title',250);
             $table->text('resumen');
             $table->text('content');
@@ -23,11 +24,14 @@ class CreateCmsSectionsTable extends Migration
             $table->dateTime('publish_date');
             $table->boolean('publish');
             $table->text('uri');
+            $table->integer('order_by');
             $table->boolean('active');
             $table->integer('register_by');
             $table->timestamp('register_date');
             $table->integer('modify_by');
             $table->dateTime('modify_date');
+
+
             $table->timestamps();
             
 

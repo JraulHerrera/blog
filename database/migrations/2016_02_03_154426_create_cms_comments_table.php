@@ -14,8 +14,10 @@ class CreateCmsCommentsTable extends Migration
     {
         Schema::create('cms_comments', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('id_comment');
-            $table->integer('id_document');
+            $table->integer('id_comment')->unsigned();
+            $table->integer('id_document')->unsigned();
+            $table->foreign('id_document')->references('id')->on('cms_documents');
+            $table->foreign('id_comment')->references('id')->on('cms_comments');
             $table->string('mail',500);
             $table->string('title',250);
             $table->text('content');

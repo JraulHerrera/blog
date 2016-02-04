@@ -13,8 +13,10 @@ class CreateCmsDocumentTagsTable extends Migration
     public function up()
     {
         Schema::create('cms_document_tags', function (Blueprint $table) {
-               $table->increments('id_document');
-              $table->integer('id_tag');
+            $table->increments('id_document')->unsigned();
+            $table->foreign('id_document')->references('id')->on('cms_documents');
+            $table->integer('id_tag')->unsigned();
+            $table->foreign('id_tag')->references('id')->on('cat_tags');
             $table->boolean('active');
             $table->integer('register_by');
             $table->timestamp('register_date');

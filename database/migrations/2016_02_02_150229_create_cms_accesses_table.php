@@ -13,7 +13,7 @@ class CreateCmsAccessesTable extends Migration
     public function up()
     {
         Schema::create('cms_accesses', function (Blueprint $table) {
-            $table->integer('id');
+            $table->increments('id');
             $table->string('title',250);
             $table->text('description');
             $table->boolean('active');

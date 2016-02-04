@@ -1974,8 +1974,12 @@ pre code {
  .priChec
   {
     margin-left: 63%;
-    margin-top: 12%;
+    margin-top: 3%;
     width: 55%;}
+  .publiChec{
+ margin-left: 60%;
+    margin-top: 2%;
+    width: 31%;}
   
   .col-md-1 {
     width: 8.33333333%;

@@ -14,7 +14,8 @@ class CreateCmsDocumentsTable extends Migration
     {
         Schema::create('cms_documents', function (Blueprint $table) {
               $table->increments('id');
-            $table->integer('id_category');
+            $table->integer('id_category')->unsigned();
+            $table->foreign('id_category')->references('id')->on('cms_categories');
             $table->string('title',250);
             $table->text('resumen');
             $table->text('content');
@@ -24,6 +25,7 @@ class CreateCmsDocumentsTable extends Migration
             $table->boolean('publish');
             $table->text('hits');
             $table->text('uri');
+            $table->integer('order_by');
             $table->boolean('active');
             $table->integer('register_by');
             $table->timestamp('register_date');
